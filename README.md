@@ -1,10 +1,10 @@
-# React App - Corona Track 
+# Getting Started with Create React App
 
-This project was to get a number of new corona cases and date to represent to a graph. The app will store your data into the firebase so you need an account for firebase database.
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Installation
+## Available Scripts
 
-run `npm i react-date-picker` on your terminal to install the date-picker.
+In the project directory, you can run:
 
 ### `npm start`
 

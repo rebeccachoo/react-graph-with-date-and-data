@@ -33,12 +33,15 @@
 	padding-left: 10px;
 	margin-right: 10px;
 }
-.VirusDataWrapper button.SubmitBtn {
+.VirusDataWrapper input.Submit {
+	margin-top: 30px;
 	border: 1px #34312d solid;
 	border-radius: 5px;
-	padding-left: 30px;
-	padding-right: 30px;
+	padding: 10px 30px;
 	color: #14110f;
 	margin-left: 100px;
 	cursor: pointer;
+}
+.VirusDataWrapper input.Submit:hover {
+	margin-top: 32px;
 }
