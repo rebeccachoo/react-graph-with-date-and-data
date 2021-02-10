@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Pangolin&display=swap");
+
+.VirusData {
+	font-family: "Pangolin", cursive;
+	text-align: center;
+	border-top: 1px #d9c5b2 solid;
+	padding-top: 30px;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.Alert {
+	color: red;
+	visibility: hidden;
+	padding-bottom: 5px;
+}
+.VirusDataWrapper {
+	width: 80%;
+	align-items: center;
+	justify-content: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.VirusDataWrapper input {
+	width: 200px;
+	height: 40px;
+	border: 1px #34312d solid;
+	box-sizing: border-box;
+	border-radius: 4px;
+	padding-left: 10px;
+	margin-right: 10px;
+}
+.VirusDataWrapper button.SubmitBtn {
+	border: 1px #34312d solid;
+	border-radius: 5px;
+	padding-left: 30px;
+	padding-right: 30px;
+	color: #14110f;
+	margin-left: 100px;
+	cursor: pointer;
+}
