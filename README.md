@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# React - Corona Track App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was to get a number of new corona cases and date to represent to a graph. The app will store your data into the firebase.
 
 ## Available Scripts
 
