@@ -2,9 +2,9 @@
 
 This project was to get a number of new corona cases and date to represent to a graph. The app will store your data into the firebase.
 
-## Available Scripts
+## Installation
 
-In the project directory, you can run:
+run `npm i react-date-picker` on your terminal to install the date-picker.
 
 ### `npm start`
 
