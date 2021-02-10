@@ -1,4 +1,4 @@
-# React - Corona Track App
+# React App - Corona Track 
 
 This project was to get a number of new corona cases and date to represent to a graph. The app will store your data into the firebase so you need an account for firebase database.
 
