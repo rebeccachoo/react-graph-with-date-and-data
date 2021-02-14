@@ -42,6 +42,9 @@ In src/components/Graph/Graph.js on line #22, you can put change the data in the
 				"2020-10": 5896,
 			},
       `
+      
+## Change the dimension of the graph
+In src/components/Graph/Graph.js on line #73, you can change the width and height of the graph.
 
 ## Contributing
 
