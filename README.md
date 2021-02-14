@@ -26,7 +26,7 @@ Runs the app in the development mode.\
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-## Put your own data
+## Change the initial Graph data
 You can put the initial data to modify the graph.
 In src/components/Graph/Graph.js on line #22, you can put change the data in the array to show the initial array. The program will sort the array by date when it render.
 `dateAndDataArray: {
