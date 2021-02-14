@@ -1,4 +1,4 @@
-# React App - Show a Graph of Corona Cases
+# React App - Show a graphy with date and data
 
 This single page app will show you a graph that increase and decrease of corona cases with date.
 You can also put fake data to modify the graph.
