@@ -31,10 +31,15 @@ You can put the initial data to modify the graph.
 In src/components/Graph/Graph.js on line #22, you can put change the data in the array to show the initial array. The program will sort the array by date when it render.
 <br />
 `dateAndDataArray: {
-				"2015-02": 3333,
-				"2010-04": 333,
-				"1984-01": 220,
-				"1888-09": 100,
+				"2020-03": 814,
+				"2020-04": 1270,
+				"2020-05": 1107,
+				"2020-06": 8123,
+				"2020-06": 7434,
+				"2020-07": 8123,
+				"2020-08": 5134,
+				"2020-09": 4310,
+				"2020-10": 5896,
 			},
       `
 
