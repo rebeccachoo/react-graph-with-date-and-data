@@ -26,6 +26,16 @@ Runs the app in the development mode.\
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+## Put your own data
+
+`dateAndDataArray: {
+				"2015-02": 3333,
+				"2010-04": 333,
+				"1984-01": 220,
+				"1888-09": 100,
+			},
+      `
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
