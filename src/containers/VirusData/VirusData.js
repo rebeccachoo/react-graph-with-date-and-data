@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styles from "./VirusData.module.css";
 import DatePicker from "react-datepicker";
+import Graph from "../../components/Graph/Graph";
 import "react-datepicker/dist/react-datepicker.css";
 
 class VirusData extends Component {
@@ -84,6 +85,7 @@ class VirusData extends Component {
 				<button onClick={this.submitHandler} className={styles.Submit}>
 					Submit
 				</button>
+				<Graph />
 			</div>
 		);
 	}
