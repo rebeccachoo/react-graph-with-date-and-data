@@ -1,6 +1,8 @@
 # React App - Render a Graph with your date/data
 
-This single page will take your date/number data to show a graph
+This single page will take your date/number data to show a graph.
+The page will take date/number to save on firebase database and it will show it after saving.
+<br />
 
 | Feature | Description |
 | -----: | :----------- |
