@@ -1,66 +1,70 @@
-# React App - Show a graphy with date and data
+# Getting Started with Create React App
 
-This single page app will show you a graph that increase and decrease of corona cases with date.
-You can also put fake data to modify the graph.
-<br /><br />
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-| Feature | Description |
-| -----: | :----------- |
-|  Initial state | <img src="https://github.com/rebeccachoo/react-coronavirus-track/blob/main/corona.png?raw=true"  width="400">| 
+## Available Scripts
 
-
-
-## Installation
-
-### `npm install`
-
-Install the app in the development mode.\ 
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+In the project directory, you can run:
 
 ### `npm start`
 
-Runs the app in the development mode.\ 
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
-## Change the initial Graph data
-You can put the initial data to modify the graph.
-In src/components/Graph/Graph.js on line #22, you can put change the data in the array to show the initial array. The program will sort the array by date when it render.
-<br />
-`dateAndDataArray: {
-				"2020-03": 814,
-				"2020-04": 1270,
-				"2020-05": 1107,
-				"2020-06": 8123,
-				"2020-06": 7434,
-				"2020-07": 8123,
-				"2020-08": 5134,
-				"2020-09": 4310,
-				"2020-10": 5896,
-			},
-      `
-      
-## Change the dimension of the graph
-In src/components/Graph/Graph.js on line #73, you can change the width and height of the graph.
-`<Chart
-							options={this.state.options}
-							series={this.state.series}
-							type="bar"
-							width="700"
-							height="350"
-						/>
-						`
+### `npm test`
 
-## Contributing
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
-Please make sure to update tests as appropriate. 
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
 ## Learn More
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

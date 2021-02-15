@@ -7,8 +7,9 @@ const Cockpit = (props) => {
 			<h1>Coronavirus Case Count in Texas</h1>
 			<h5>Updated {Date().toLocaleString()}</h5>
 			<p>
-				This app is just for a test to enter data to firebase server and show
-				it. And also, you can delete or enter a data.
+				The data shown here is dummy. <br /> <br />
+				This app is just for a test to enter data to firebase server and show it
+				with a graph.
 			</p>
 
 			<h4>Please enter a date and a number of new cases.</h4>

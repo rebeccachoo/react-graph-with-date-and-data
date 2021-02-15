@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Chart from "react-apexcharts";
+import styles from "./Graph.module.css";
+import axios from "../../axios-db";
 
 class Graph extends Component {
 	constructor(props) {
@@ -15,33 +17,40 @@ class Graph extends Component {
 			},
 			series: [
 				{
-					name: "series-1",
+					name: "Corona New Cases in Texas",
 					data: [],
 				},
 			],
-			dateAndDataArray: {
-				"2015-02": 3333,
-				"2010-04": 333,
-				"1984-01": 220,
-				"1888-09": 100,
-			},
+			dateAndDataArray: {},
+			isFetching: true,
 		};
 	}
 	componentDidMount() {
-		this.renderGraph();
+		axios.get("/data.json").then((response) => {
+			this.setState({ dateAndDataArray: response.data });
+		});
+
+		setTimeout(() => {
+			this.renderGraph();
+		}, 100);
 	}
 	renderGraph() {
-		const ordered = Object.keys(this.state.dateAndDataArray)
+		let temp = [];
+		for (const [key, value] of Object.entries(this.state.dateAndDataArray)) {
+			temp[Object.keys(value)] = Object.values(value);
+		}
+		const ordered = Object.keys(temp)
 			.sort()
 			.reduce((obj, key) => {
-				obj[key] = this.state.dateAndDataArray[key];
+				obj[key] = temp[key];
 				return obj;
 			}, {});
-		const keys = Object.keys(this.state.dateAndDataArray);
-		const values = Object.keys(ordered).map((index) => {
-			return ordered[index];
-		});
-		console.log(values);
+		let keys = [];
+		let values = [];
+		for (const [key, value] of Object.entries(ordered)) {
+			keys.push(key);
+			values.push(parseInt(value));
+		}
 		this.setState({
 			options: {
 				xaxis: {
@@ -53,19 +62,25 @@ class Graph extends Component {
 					data: values,
 				},
 			],
+			isFetching: false,
 		});
+		this.forceUpdate();
 	}
 
 	render() {
 		return (
 			<div>
 				<div className="row" style={{ paddingTop: "30px" }}>
+					<p className={styles.blink_me}>
+						{this.state.isFetching ? "Fetching data..." : ""}
+					</p>
 					<div className="mixed-chart">
 						<Chart
 							options={this.state.options}
 							series={this.state.series}
 							type="bar"
-							width="500"
+							width="700"
+							height="350"
 						/>
 					</div>
 				</div>
