@@ -26,6 +26,11 @@ Runs the app in the development mode.\
 The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
+### Firebase Database
+
+You need to put your own firebase account Realtime Database url to #4 in 'src/axios-db.js'.
+ex) `baseURL: "https://graph-7b953-default-rtdb.firebaseio.com/",`
+
 ## Contributing
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
