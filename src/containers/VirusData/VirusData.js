@@ -12,28 +12,38 @@ class VirusData extends Component {
 			newCases: 0,
 			dateToPut: new Date(),
 			error: false,
-			loadingMsg: "Loading...",
 			errMsg: "",
 			errorStyle: "styles.AlertHidden",
 			ingredients: null,
+			refresh: false,
+
+			options: {
+				chart: {
+					id: "basic-bar",
+				},
+				xaxis: {
+					categories: [],
+				},
+			},
+			series: [
+				{
+					name: "Corona New Cases in Texas",
+					data: [],
+				},
+			],
+			dateAndDataArray: {},
+			isFetching: true,
 		};
 		this.submitHandler = this.submitHandler.bind(this);
 		this.newCaseChangeHandler = this.newCaseChangeHandler.bind(this);
 		this.setStartDate = this.setStartDate.bind(this);
 	}
 	componentDidMount() {
-		// axios
-		// 	.get("https://graph-7b953-default-rtdb.firebaseio.com/")
-		// 	.then((response) => {
-		// 		this.setState({ ingredients: response.data });
-		// 		console.log(this.state.ingredients);
-		// 	})
-		// 	.catch((error) => {
-		// 		this.setState({ error: true });
-		// 	});
-		// axios.post("/data.json", { "2021-09": 6555 });
+		this.renderGraph();
 	}
-	submitHandler = (event) => {
+	submitHandler = (e) => {
+		e.preventDefault();
+
 		let num = +this.state.newCases;
 		let date = this.state.dateToPut;
 		if (!Number.isInteger(num)) {
@@ -64,12 +74,50 @@ class VirusData extends Component {
 		axios
 			.post("/data.json", obj)
 			.then((response) => {
-				console.log(response);
+				// console.log("renderGraph will be called. " + response);
+				this.renderGraph();
 			})
 			.catch((error) => {
 				console.log(error);
 			});
 	};
+	renderGraph = () => {
+		axios.get("/data.json").then((response) => {
+			this.setState({ dateAndDataArray: response.data });
+		});
+		setTimeout(() => {
+			let temp = [];
+			for (const [key, value] of Object.entries(this.state.dateAndDataArray)) {
+				temp[Object.keys(value)] = Object.values(value);
+			}
+			const ordered = Object.keys(temp)
+				.sort()
+				.reduce((obj, key) => {
+					obj[key] = temp[key];
+					return obj;
+				}, {});
+			let keys = [];
+			let values = [];
+			for (const [key, value] of Object.entries(ordered)) {
+				keys.push(key);
+				values.push(parseInt(value));
+			}
+			console.log("keys   " + keys);
+			this.setState({
+				options: {
+					xaxis: {
+						categories: keys,
+					},
+				},
+				series: [
+					{
+						data: values,
+					},
+				],
+			});
+		}, 100);
+	};
+
 	newCaseChangeHandler = (event) => {
 		let num = +event.target.value;
 		if (Number.isInteger(num)) {
@@ -116,7 +164,7 @@ class VirusData extends Component {
 				<button onClick={this.submitHandler} className={styles.Submit}>
 					Submit
 				</button>
-				<Graph />
+				<Graph options={this.state.options} series={this.state.series} />
 			</div>
 		);
 	}
