@@ -7,7 +7,7 @@ The page will save the data on firebase database and it will update the graph.
 | Feature | Description |
 | -----: | :----------- |
 |  Initial state | <img src="https://github.com/rebeccachoo/react-graph-with-date-and-data/blob/main/screenshot.png?raw=true"  width="400">| 
-|  Error(case number) | https://github.com/rebeccachoo/react-graph-with-date-and-data/blob/main/error.png?raw=true|
+|  Error(case number) | <img src="https://github.com/rebeccachoo/react-graph-with-date-and-data/blob/main/error.png?raw=true" width="400">|
 
 
 ## Installation
