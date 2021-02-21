@@ -47,11 +47,4 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 
 ##  Contributors
 
- 
-| -----: | :----------- |
-|  <img src="https://avatars.githubusercontent.com/u/254729?s=460&u=58ed23724180265db677357b4133d4ef970d6407&v=4" style="border-radius:50%;" /> |<img src="https://github.com/rebeccachoo" />| 
-
- 
-
-	Kirill Volkovich
-
+|  <img src="https://avatars.githubusercontent.com/u/254729?s=460&u=58ed23724180265db677357b4133d4ef970d6407&v=4" style="border-radius:50%;" /> |<a href="https://github.com/rebeccachoo">Rebecca Choo</a>| 
